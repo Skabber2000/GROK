@@ -14,12 +14,12 @@ import asyncio
 nest_asyncio.apply()
 
 # GROK API Configuration
-GROK_API_KEY = "xai-DQbpK6xxdPfEuxuLft2TR5X1HviE1cWrKPARt2QX5Xa9cKcbVlphohuiexB9zQYZtYdpOzHsRSPyTYKg"
+GROK_API_KEY = os.getenv("GROK_API_KEY")
 GROK_API_URL = "https://api.x.ai/v1/chat/completions"
 MODEL_NAME = "grok-beta"
 
 # Telegram Bot Token
-TELEGRAM_BOT_TOKEN = "7697846325:AAHVBkjxxqWSR2bcs2GG3G33zPmNvhcvIEE"
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
 # Function to get a response from GROK
 def get_grok_response(user_message):
